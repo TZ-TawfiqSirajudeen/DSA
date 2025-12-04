@@ -33,3 +33,17 @@
 const array = [1, 2, 12, 2, 1, 5, 5, 6];
 console.log(array.indexOf(2));
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let x = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== nums[x]) {
+      x = x + 1;
+      nums[x] = nums[i];
+    }
+  }
+  return x + 1;
+};
